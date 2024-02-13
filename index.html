@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for you!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Happy Valentines, love!</h1>
+    <div class="heart"></div>
+    <div class="contain">
+    <div class="heart1"></div>
+    <div class="heart2"></div>
+</div>
+<p>Would you like to celebrate your Valentine with me/them<span>(ate jen and kuya)</span>?</p>
+<button class="answerButton" onclick="location.href='thankyou.html'">Yes</button>
+<button class="answerButton" id="noButton">No</button>
+<script>
+    document.getElementById('noButton').addEventListener('click', function() {
+        var yesButton = document.querySelector('button[onclick*="thankyou.html"]');
+        var currentFontSize = parseInt(window.getComputedStyle(yesButton).fontSize);
+        yesButton.style.fontSize = (currentFontSize + 10) + 'px'; // Increase font size by 5px
+    });
+</script>
+</body>
+</html>
